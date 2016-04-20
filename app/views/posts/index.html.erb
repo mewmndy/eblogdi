@@ -18,13 +18,15 @@
 
   <tbody>
     <% @posts.each do |post| %>
+
       <tr>
         <td>
           <h4><%= post.title %></h4>
 
-          <%= post.body %></td>
+          <%= post.body %>
+          <%= link_to 'Read more...', post %>
 
-        <td><%= link_to 'Show', post %></td>
+        
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
