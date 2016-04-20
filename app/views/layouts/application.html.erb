@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>E-Blog for Smartphone</title>
+  
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+    
+    </style>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
+
+
 <body>
 
   <header class="navbar navbar-default">
@@ -13,7 +22,7 @@
       <div class="navbar-header">
         <%= link_to 'Blog', root_path, class: 'navbar-brand' %>
       </div>
-      <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+      <div id="bs-navbar-collapse-1" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li>
             <%= link_to 'Post', posts_path %>
@@ -31,12 +40,19 @@
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-in lg"></i>
+                <i class="fa fa-sign-out lg"></i>
               <% end %>
             </li>
           </ul>
         <% else %>
-
+            <ul class="nav navbar-nav navbar-right">
+            
+            <li>
+              <%= link_to new_user_session_path do%>
+                <i class="fa fa-sign-in lg"></i>
+              <% end %>
+            </li>
+          </ul>
         <% end %>
       </div>
     </div>
@@ -45,6 +61,6 @@
   <div class="container">
     <%= yield %>
   </div>
-
+</br></br>
 </body>
 </html>

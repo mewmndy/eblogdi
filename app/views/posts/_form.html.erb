@@ -11,15 +11,32 @@
     </div>
   <% end %>
 
+<dl >
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <dt>
+      <%= f.label :title %><br>
+   </dt>
+   <dd>
+      
+    <input type="text" class="form-control input-lg" placeholder="title" <%= f.text_field :title %>
+   </dd>
   </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+</br>
+ <div class="field">
+     <dt>
+      <%= f.label :body %><br>
+    </dt>
+    <dd>
+     
+     <textarea class="form-control input-lg" rows="10" <%= f.text_area :body %></textarea>
+     </dd>
   </div>
+
+  </br>
+
   <div class="actions">
-    <%= f.submit %>
+    <button type="submit" class="btn btn-default" <%= f.submit %> Create Post
+          </button><br/>
   </div>
+
 <% end %>

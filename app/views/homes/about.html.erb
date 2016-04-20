@@ -1,2 +1,23 @@
 <h1> About </h1>
-edit your about page
+<p>name</p>
+<p>avatar</p>
+<p>username</p>
+<div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+</div>
+
+<% if user_signed_in? %>
+ <p>
+	  <strong>User:</strong>
+	   <%= @user.email %>
+	</p>
+<% else %>
+   <p>
+	  <strong>Welcome to E- Blog</strong>
+	</p>
+	 <p>
+	  <strong>let joy us</strong>
+	</p>
+<% end %>

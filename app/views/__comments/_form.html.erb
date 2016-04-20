@@ -13,11 +13,13 @@
 
   <div class="field">
     <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
+    <input type="text" class="form-control input-lg" placeholder="title" <%= f.text_field :commenter %>
+
   </div>
   <div class="field">
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <textarea class="form-control input-lg" rows="3" <%= f.text_area :body %></textarea>
+    
   </div>
   <div class="actions">
     <%= f.submit %>
