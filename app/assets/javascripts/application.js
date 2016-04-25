@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require turbolinks
+
 //= require_tree .
