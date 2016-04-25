@@ -41,7 +41,8 @@
         </li>
       </ul>
       <div>
-      <ul class="nav navbar-nav navbar-right">
+       <ul class="nav navbar-nav navbar-right">
+        <div class="container">
         <% if user_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
             <li>
@@ -65,6 +66,7 @@
             </li>
           </ul>
         <% end %>
+        </div>
       </ul>
       </div>
     </div><!-- /.navbar-collapse -->
@@ -74,7 +76,11 @@
 
 </br></br>
   <div class="container-fluid">
-   
+    <div class="col-sm-6 col-sm-offset-3">
+      <ui-view>
+        <%= yield %>
+      </ui-view>
+    </div>
   </div>
 </br></br>
 
