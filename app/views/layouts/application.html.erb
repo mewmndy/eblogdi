@@ -16,7 +16,7 @@
   
   <div class="row">
     
-      <ui-view>
+
 
   <header class="navbar navbar-default">
     
@@ -62,11 +62,15 @@
   </header>
 
   <div class="container-fluid">
+    <div class="col-sm-6 col-sm-offset-3">
+      <ui-view>
     <%= yield %>
+    </ui-view>
+    </div>
   </div>
 </br></br>
 
-</ui-view>
+
     
   </div>
 
