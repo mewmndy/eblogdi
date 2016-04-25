@@ -6,7 +6,7 @@ Listing Posts
 <%= link_to 'New Post', new_post_path, class: 'btn btn-default pull-right' %>  
 </div>
 </h2>
-
+<!--div class="navbar navbar-default navbar-fixed">!-->
 <table class="table table-hover ">
 <thead>
 <tr>
@@ -16,7 +16,7 @@ Listing Posts
 </tr>
 </thead>
 
-<tbody>
+<tbody class="navbar-fixed">
 <% @posts.each do |post| %>
 <tr>
 <td>
@@ -30,4 +30,5 @@ Listing Posts
 <% end %>
 </tbody>
 </table>
+</div>
 </div>
