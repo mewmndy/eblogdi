@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5'
+gem 'ruby'
+gem 'rails', '>=4.2.5'
 gem 'pg', '~> 0.15'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-rails', '~> 4.4'
@@ -22,5 +23,6 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rails_12factor'
 end
 
