@@ -1,4 +1,4 @@
-<div class="container-fluid navbar-fixed">
+<div class="container-fluid">
 
 <h2>
 <div class="row">
@@ -7,14 +7,16 @@ Listing Posts
 </div>
 </h2>
 
-<table class="table table-hover navbar-fixed">
+<table class="table table-hover">
 
-<tbody class="navbar-fixed">
+<tbody>
 <% @posts.each do |post| %>
 <tr>
 <td>
 <h4><%= post.title %></h4>
-<%= post.body %>
+
+<div class="container-fluid"><%= post.body %></div>
+
 <%= link_to 'Read more...', post %>
         
 <td><%= link_to 'Edit', edit_post_path(post) %></td>
