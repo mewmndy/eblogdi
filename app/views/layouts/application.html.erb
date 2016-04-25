@@ -40,9 +40,9 @@
           <%= link_to 'About', about_homes_path %>
         </li>
       </ul>
-      
+      <div class="container">
        <ul class="nav navbar-nav navbar-right">
-        <div class="container">
+        
         <% if user_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
             <li>
@@ -66,9 +66,9 @@
             </li>
           </ul>
         <% end %>
-        </div>
+        
       </ul>
-      
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
