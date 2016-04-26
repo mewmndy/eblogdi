@@ -1,17 +1,13 @@
 
 <div class="panel panel-warning">
       <div class="panel-heading">
-        <h4 >
-        <strong>Title:</strong>
-        <%= @post.title %>
-      </h4>
+        <h3>
+        <strong><%= @post.title %></strong>
+        </h3>
 
-      <h4 >
-        <strong>Body:</strong>
-        
-        <article class="fit-full  color-scheme--lightgrey  grid-row fit-fixed js-postField js-notesSource editable" ><%= @post.body %></article>
-
-        
+      <h4 ><ul class="list-unstyled">
+        <p class="lead, text-nowrap, text-overflow" ><dd class="aria-describedby"> <%= @post.body %></dd></p>
+        </ul>
       </h4>
       <i></i>
       <p>

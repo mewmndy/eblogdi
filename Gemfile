@@ -13,17 +13,19 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
+gem 'rails_12factor'
+
 
 # user management
 gem 'devise'
 
 group :development, :test do
   gem 'byebug'
+  gem 'foreman'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'rails_12factor'
 end
 
