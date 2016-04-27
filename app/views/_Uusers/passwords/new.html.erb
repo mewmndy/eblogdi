@@ -11,6 +11,14 @@
   <div class="actions">
     <%= f.submit "Send me reset password instructions" %>
   </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Send me reset password instructions" %>
+  </div>
 <% end %>
 
 <%= render "users/shared/links" %>
