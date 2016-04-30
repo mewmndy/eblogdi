@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  root 'posts#index'
+  root 'posts#indexByID'
+
+  get 'posts/indexByID', to: 'posts#indexByID'
   
   resources :posts do
     resources :comments
