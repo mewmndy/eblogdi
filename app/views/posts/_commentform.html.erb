@@ -1,17 +1,17 @@
-<h4> Write Comment </h4>
+<h4> เขียนความเห็น </h4>
 <%= form_for([@post, @comment]) do |f| %>
 
   <div class="col-xs-12 col-md-8">
-    <%= f.label :commenter %><br>
+    <%= f.label :commenter, 'ผู้เขียนความเห็น' %><br>
     
     <input type="text" class="form-control" placeholder="name" <%= f.text_field :commenter %>
   </input>
   
-    <%= f.label :body %><br>
+    <%= f.label :body, 'ความคิดเห็น' %><br>
     <textarea class="form-control" rows="3" <%= f.text_area :body %></textarea></textarea>
     
     </br>
-    <button type="submit" class="btn btn-default" <%= f.submit %> Comment
+    <button type="submit" class="btn btn-default" <%= f.submit %> บันทึก
           </button><br/>
 </div>
 <% end %>

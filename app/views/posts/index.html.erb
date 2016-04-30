@@ -1,9 +1,14 @@
+<style type="text/css">
+.moretext {
+   background:url(/images/leaf.gif) no-repeat right middle;
+   padding: 10px 50px 15px 5px}
+  </style>
 <div class="container-fluid">
 
 <h2>
 <div class="row">
-Listing Posts
-<%= link_to 'New Post', new_post_path, class: 'btn btn-default pull-right' %>  
+รวมบทความ
+<%= link_to 'เขียนบทความ', new_post_path, class: 'btn btn-default pull-right' %>  
 </div>
 </h2>
 
@@ -15,12 +20,12 @@ Listing Posts
 <td>
 <h4><%= post.title %></h4>
 
-<!-- <div class="container-fluid" row=><%= post.body %></div> -->
+<div class="container-fluid moretext"><%= post.body %></div>
 
-<%= link_to 'Read more...', post %>
+<%= link_to 'อ่านบทความ...', post %>
         
-<td><%= link_to 'Edit', edit_post_path(post) %></td>
- <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<td><%= link_to 'แก้ไข', edit_post_path(post) %></td>
+ <td><%= link_to 'ลบ', post, method: :delete, data: { confirm: 'ต้องการลบบทความนี้ใช่หรือไม่' } %></td>
 </tr>
 <% end %>
 </tbody>

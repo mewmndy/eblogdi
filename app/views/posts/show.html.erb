@@ -4,19 +4,19 @@
         <h3>
         <strong><%= @post.title %></strong>
         </h3>
-
-      <h4 ><ul class="list-unstyled">
-        <p class="lead, text-nowrap, text-overflow" ><dd class="aria-describedby"> <%= @post.body %></dd></p>
-        </ul>
-      </h4>
-      <i></i>
       <p>
-        <strong>User:</strong>
+        <strong>ผู้เขียน:</strong>
         <%= @post.user.email %>
       </p>
       </div>
       <div class="panel-body">
-        <h4> Comment </h4>
+
+          <textarea disabled class="form-control input-lg js-postField js-notesSource noresize" resize="none" ><%= @post.body %></textarea>
+          <script>
+            $("textarea").autosize();
+          </script>
+
+        <h4> ความเห็น </h4>
         <% @comments.each do |comment| %>
           <p>
             <strong><%= comment.commenter %>:</strong>
@@ -34,6 +34,9 @@
 </br>
 
 <div class="container">
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-  <%= link_to 'Back', posts_path %>
+  <%= link_to 'แก้ไข', edit_post_path(@post) %> |
+  <%= link_to 'ย้อนกลับ', posts_path %>
 </div>
+
+
+
