@@ -1,18 +1,23 @@
-<h1> About </h1>
-<p>name</p>
-<p>avatar</p>
-<p>username</p>
-<div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-</div>
+<h1> ข้อมูลส่วนตัว </h1>
+
 
 <% if user_signed_in? %>
  <p>
-	  <strong>User:</strong>
+	  <strong>อีเมลล์:</strong>
 	   <%= @user.email %>
 	</p>
+
+	<strong>เปลี่ยนพาสเวิร์ด:</strong>
+	<%= link_to edit_user_registration_path do %>
+                <i class="fa fa-gear lg"></i> ตั้งค่า 
+    <% end %>
+
+<div class="form-group">
+    <label for="exampleInputFile">ภาพของฉัน:</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">	</p>
+</div>
+
 <% else %>
    <p>
 	  <strong>Welcome to E- Blog</strong>
