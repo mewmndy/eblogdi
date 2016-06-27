@@ -13,19 +13,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> /พาสเวิร์ด<br />
+    <%= f.label :password %> /รหัสผ่าน <br />
     <i>(ไม่กรอกข้อมูลใดๆ หากไม่ต้องการเปลี่ยนพาสเวิร์ด)</i> 
     <input type="password" class="form-control input-lg" id="inputPassword" placeholder="Password"<%= f.password_field :password, autocomplete: "off" %>
     
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %>/ยืนยันพาสเวิร์ด <br /> 
+    <%= f.label :password_confirmation %>/ยืนยันรหัสผ่าน <br /> 
     <input type="password" class="form-control input-lg" id="inputPasswordConfirmation" placeholder="Password"<%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> /พาสเวิร์ดปัจจุบัน <br /> 
+    <%= f.label :current_password %> /รหัสผ่านปัจจุบัน <br /> 
     <i>(เพื่อยืนยันการเปลี่ยนข้อมูล)</i><br />
 
     <input type="password" class="form-control input-lg" id="inputPasswordConfirmation" placeholder="Password"

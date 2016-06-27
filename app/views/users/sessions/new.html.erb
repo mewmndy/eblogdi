@@ -1,28 +1,36 @@
-<h2>Log in มิว สวัสดี</h2>
-
+<h2>เข้าสู่ระบบ</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  
+  <form>
+      <div class="field">
+        <%= f.label :email %>/อีเมลล์<br/>
+        
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" <%= f.email_field :email, autofocus: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="field">
+        <%= f.label :password %>/รหัสผ่าน<br/>
+        
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password"<%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>/จดจำผูใช้งาน
+        </div>
+      <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
+      <p class="help-block">   </p>
+      <div class="actions">
+        <button type="submit" class="btn btn-default" <%= f.submit "Log in"%> Submit
+          </button><br/>
+        
+      </div>
+      
+  </form>
+
 <% end %>
 
-<%= render "users/shared/links" %>
-
+<%= render "devise/shared/links" %>

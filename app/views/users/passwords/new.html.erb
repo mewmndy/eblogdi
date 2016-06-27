@@ -1,24 +1,26 @@
-<h2>Forgot your password?</h2>
+<h2>ลืมรหัสผ่าน?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <p class="help-block">สำหรับกูเกิ้ล :: จัดการระบบเพื่อรับอีเมลล์เปลี่ยนรหัสผ่านได้ที่ลิงค์นี้.</p>
+  <a href="https://accounts.google.com/b/0/DisplayUnlockCaptcha">https://accounts.google.com/b/0/DisplayUnlockCaptcha</a>
+  </br>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    </br>
+    <%= f.label :email %>/อีเมลล์<br />
+    
+    <input type="email" class="form-control" id="inputEmail" placeholder="Email" <%= f.email_field :email, autofocus: true %>
   </div>
-
+  </br>
+  
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    
+    <button type="submit" class="btn btn-default" <%= f.submit "Send me reset password instructions" %> 
+          Send me reset password instructions </button><br/>
   </div>
+ 
 <% end %>
 
-<%= render "users/shared/links" %>
+<%= render "devise/shared/links" %>
